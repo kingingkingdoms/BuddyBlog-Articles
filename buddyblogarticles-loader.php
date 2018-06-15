@@ -116,7 +116,7 @@ class BuddyBlogArticles_Core_Component extends BP_Component {
 		}
 		// Add the Group Invites nav item.
 		$sub_nav['my-articles'] = array(
-			'name'            => __( 'Articles', 'buddyblogarticles' ),
+			'name'            => __( 'All Articles', 'buddyblogarticles' ),
 			'slug'            => BUDDYBLOGARTICLES_ARCHIVE_SLUG,
 			'parent_url'      => $blog_link,
 			'parent_slug'     => $this->slug,

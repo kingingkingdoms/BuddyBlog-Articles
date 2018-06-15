@@ -66,7 +66,7 @@ class BuddyBlogArticles_Core_Component extends BP_Component {
 			'root_slug'             => BP_BUDDYBLOGARTICLES_SLUG,
 			'has_directory'         => false,
 			'notification_callback' => 'buddyblogarticles_format_notifications',
-			'search_string'         => __( 'Search Posts...', 'buddyblogarticles' ),
+			'search_string'         => __( 'Search Articles...', 'buddyblogarticles' ),
 			'global_tables'         => array(),
 		);
 
@@ -124,12 +124,12 @@ class BuddyBlogArticles_Core_Component extends BP_Component {
 			'position'        => 30,
 		);
 
-		$sub_nav['new-post'] = array(
-			'name'            => __( 'New Post', 'buddyblogarticles' ),
+		$sub_nav['new-article'] = array(
+			'name'            => __( 'New Article', 'buddyblogarticles' ),
 			'slug'            => 'edit',
 			'parent_url'      => $blog_link,
 			'parent_slug'     => $this->slug,
-			'screen_function' => array( $screen, 'new_post' ),
+			'screen_function' => array( $screen, 'new_article' ),
 			'user_has_access' => bp_is_my_profile(),
 			'position'        => 30,
 		);
@@ -157,9 +157,9 @@ class BuddyBlogArticles_Core_Component extends BP_Component {
 			$user_domain = bp_loggedin_user_domain();
 			$blog_link   = trailingslashit( $user_domain . $this->slug );
 
-			$title = __( 'Posts', 'buddyblogarticles' );
+			$title = __( 'Articles', 'buddyblogarticles' );
 			// My Posts.
-			$wp_admin_nav['posts'] = array(
+			$wp_admin_nav['articles'] = array(
 				'parent' => $bp->my_account_menu_id,
 				'id'     => 'my-account-' . $this->id,
 				'title'  => $title,
@@ -169,16 +169,16 @@ class BuddyBlogArticles_Core_Component extends BP_Component {
 			$wp_admin_nav['my-articles'] = array(
 				'parent'   => 'my-account-' . $this->id,
 				'id'       => 'my-account-' . $this->id . '-my-articles',
-				'title'    => __( 'My Posts', 'buddyblogarticles' ),
+				'title'    => __( 'All Articles', 'buddyblogarticles' ),
 				'href'     => trailingslashit( $blog_link ),
 				'position' => 10,
 			);
 
 			// Add new Posts.
-			$wp_admin_nav['new-post'] = array(
+			$wp_admin_nav['new-article'] = array(
 				'parent'   => 'my-account-' . $this->id,
-				'id'       => 'my-account-' . $this->id . '-new-post',
-				'title'    => __( 'New Post', 'buddyblogarticles' ),
+				'id'       => 'my-account-' . $this->id . '-new-article',
+				'title'    => __( 'New Article', 'buddyblogarticles' ),
 				'href'     => trailingslashit( $blog_link . 'edit' ),
 				'position' => 20,
 			);
@@ -202,7 +202,7 @@ class BuddyBlogArticles_Core_Component extends BP_Component {
 
 			if ( bp_is_my_profile() && ! bp_is_single_item() ) {
 
-				$bp->bp_options_title = __( 'Posts', 'buddyblogarticles' );
+				$bp->bp_options_title = __( 'Articles', 'buddyblogarticles' );
 
 			} elseif ( ! bp_is_my_profile() && ! bp_is_single_item() ) {
 

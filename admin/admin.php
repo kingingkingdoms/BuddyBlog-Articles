@@ -191,7 +191,7 @@ class BuddyBlogArticles_Admin_Settings_Helper {
 			),
 			array(
 				'name'    => 'publish_cap',
-				'label'   => __( 'Which capability is required for pusblishing?', 'buddyblogarticles' ),
+				'label'   => __( 'Which capability is required for publishing?', 'buddyblogarticles' ),
 				'desc'    => __( 'Please check for https://codex.wordpress.org/Roles_and_Capabilities allowed capabilities.', 'buddyblogarticles' ),
 				'type'    => 'text',
 				'default' => 'read',

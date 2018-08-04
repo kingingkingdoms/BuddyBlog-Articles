@@ -1,14 +1,11 @@
 <?php
-/**
- * Plugin Name: BuddyBlog Articles
- * Version: 1.3.2
- * Author: K&L
- * Author URI: https://millionairedigest.com/members/kl/
- * Plugin URI: https://millionairedigest.com/
- * Description: Add a BuddyPress profile nav tab called "Articles" to user's profiles for giving our users the ability to display all of the articles they've written.
- *
- * @package buddyblog
- */
+/*
+Plugin Name: Millionaire's Digest Profile Articles
+Description: Add a BuddyPress profile nav tab called "Articles" to user's profiles for giving our users the ability to display all of the articles they've written.
+Version: 1.0.0
+Author: K&L (Founder of the Millionaire's Digest)
+Author URI: https://millionairedigest.com/
+*/
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

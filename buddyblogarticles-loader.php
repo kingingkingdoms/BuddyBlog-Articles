@@ -58,7 +58,7 @@ class BuddyBlogArticles_Core_Component extends BP_Component {
 
 		// Define a slug, if necessary.
 		if ( ! defined( 'BP_BUDDYBLOGARTICLES_SLUG' ) ) {
-			define( 'BP_BUDDYBLOGARTICLES_SLUG', $this->id );
+			define( 'BP_BUDDYBLOGARTICLES_SLUG', 'articles' );
 		}
 
 		$globals = array(
